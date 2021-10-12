@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class productSearch
+{
+   -path:String
+   -parser:JSONParser
+   -object:Object
+   -jObject:JSONObject
+   -arr:JSONArray
+
+   +pr=Product() object
+   +read=readJson() object
+}
+class Product
+{
+    +getName(JSONObject):String
+    +print(JSONObject,Integer,String)
+}
+
+class readJson
+{
+    +iterateJson(Product,JSONArray)
+}
+
+
+productSearch "Product gets the user input and prints the final result "--- Product
+productSearch "readJson iterate the Json file,Create JsonArray and print"--- readJson
+
+
+
+@enduml

@@ -1,0 +1,38 @@
+/*
+class parseData
+{
+    main()
+    {
+       -> create an object of createParseData class named array
+       -> call array.get_Arraylist to get an arrayList from
+          the input file named list
+       -> call array.createArray to create a String array called arr
+          from the arrayList
+       -> create an object of  PrintAnswer  called print
+       -> print.printArray prints the created String array
+
+    }
+}
+
+class createParseData
+{
+    get_Arraylist()
+    {
+         ->infile: the input file
+         ->Scanner sc: reads the file line by line
+         ->ArrayList<String> input: created arrayList from the input file
+         ->returns the arrayList
+    }
+
+    createArray()
+    {
+        ->creates a String array named temp from the arrayList an returns it
+    }
+}
+
+class PrintAnswer
+{
+   ->prints the String array ijn the console
+   ->reads the the array and splits each elements into three parts
+     which are last and first name and salary
+}

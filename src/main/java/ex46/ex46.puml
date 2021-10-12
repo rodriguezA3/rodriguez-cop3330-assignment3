@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class wordFrequencyFinder
+{
+   st:String
+
+   +read = readingString() object
+   +freq = frequencyCounter() object
+}
+
+class readingString
+{
+   +readString
+}
+
+class findFrequency
+{
+
+  +frequencyCounter(Map<String,Integer>):String
+  +print(String)
+}
+
+wordFrequencyFinder "readingString reads the input file and creates a string"--- readingString
+wordFrequencyFinder "findFrequency finds the frequency and prints the histogram"--- findFrequency
+@enduml

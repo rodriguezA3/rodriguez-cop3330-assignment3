@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class paresData
+{
+
+    -list:ArrayList<String>
+    -arr: String[]
+
+    +main()
+    +array=createParseData()object
+    +print=PrintAnswer()object
+
+}
+
+class createParseData
+{
+   +get_Arraylist():ArrayList<String>
+   +createArray(ArrayList<String>):String[]
+
+}
+
+class printAnswer
+{
+   +printArray(String[])
+}
+
+paresData "use createParseData to create an arrayList, and String array from the input file"---createParseData
+paresData "use printAnswer to split the array into first, last names, salru and print them"---printAnswer
+@enduml
